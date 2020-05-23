@@ -15,8 +15,8 @@ class Polynominal {
       return false;
     }
     const exprSum = [].concat(exprA, exprB);
-    sortExpression(exprSum);
-    return toString(exprSum);
+    // sortExpression(exprSum);
+    return toString(sortExpression(exprSum));
   }
   
   function sortExpression(expression) {
@@ -77,7 +77,17 @@ class Polynominal {
       return false
     }
   }
-  
+  //For easy creating new expressions
+  function makePolynominals(arr){
+    const polyArr = [];
+    arr.forEach((element) => {
+      polyArr.push(new Polynominal(element[0], element[1]));
+    })
+    return polyArr
+  }
+
+console.log(addExpressions(makePolynominals([[3,2],[4,2],[1,3]]),makePolynominals([[3,3],[5,2],[1,2],[1,3]])));
+
   //Tests
   //Main Test
   
@@ -123,4 +133,6 @@ class Polynominal {
   //   mainTest([new Polynominal(1, 2), new Polynominal(3, 3), new Polynominal(4, 4), new Polynominal(8, 2), new Polynominal(-12, 0)], [new Polynominal(5.42, 1), new Polynominal(2, 0), new Polynominal(2, -5), new Polynominal(2, 3), new Polynominal(2, 1), new Polynominal(2, 2)], "4x^4 + 5x^3 + 11x^2 + 7.42x^1 + -10 + 2x^-5", "Third test. Real number in variable");
   //   mainTest([new Polynominal(2, 3), new Polynominal(2, 4), new Polynominal(2, 3), new Polynominal(2, 5), new Polynominal(2, 2)], [new Polynominal(2, 1), new Polynominal(2, 0), new Polynominal(2, -5), new Polynominal(2, 3), new Polynominal(2, 1), new Polynominal(2, 2)], "2x^5 + 2x^4 + 6x^3 + 4x^2 + 4x^1 + 2 + 2x^-5", "Fourth test.");
   //   mainTest([new Polynominal(3, 3), new Polynominal(6, 2), new Polynominal(3, -8), new Polynominal(2, 0)], [new Polynominal(1, 2), new Polynominal(3, 3), new Polynominal(4, 4), new Polynominal(8, 2), new Polynominal(-12, 0)], "4x^4 + 6x^3 + 15x^2 + -10 + 3x^-8", "Fifth test. First test but reversed.");
-  
+
+  // console.log(addExpressions([new Polynominal(3, 3), new Polynominal(6, 2), new Polynominal(3, 8), new Polynominal(2, 0)], [new Polynominal(1, 2), new Polynominal(3, 3), new Polynominal(4, 4), new Polynominal(8, 2), new Polynominal(-12, 0)]));
+  // console.log(addExpressions([new Polynominal(3, 3), new Polynominal(6, 2), new Polynominal(3, -8), new Polynominal(2, 0)], [new Polynominal(1, 2), new Polynominal(3, 3), new Polynominal(4, 4), new Polynominal(8, 2), new Polynominal(-12, 0)]));
