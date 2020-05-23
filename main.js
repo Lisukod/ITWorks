@@ -7,6 +7,8 @@ class Polynominal {
 }
 
 function addExpressions(exprA, exprB) {
+  exprA = makePolynominals(exprA);
+  exprB = makePolynominals(exprB);
   if (checkVariables(exprA) === false) {
     console.error("Incorrect variable in first expression");
     return false;
@@ -136,3 +138,12 @@ function sortTest(array, expectedArray) {
 
 // console.log(addExpressions(makePolynominals([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]]), makePolynominals([[3, 3], [6, 2], [3, -8], [2, 0]])));
 // console.log(addExpressions(makePolynominals([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]]), makePolynominals([[3, 3], [6, 2], [3, -8], [2, 0]])));
+
+
+const arr1 = makePolynominals([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]]);
+const arr2 = makePolynominals([[3, 3], [6, 2], [3, -8], [2, 0]]);
+
+console.log(addExpressions([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]], [[3, 3], [6, 2], [3, -8], [2, 0]]));
+console.log(addExpressions([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]], [[3, 3], [6, 2], [3, -8], [2, 0]]));
+console.log(addExpressions([[1, 2],[3, 3], [4, 4], [8, 2], [-12, 0]], [[3, 3], [6, 2], [3, -8], [2, 0]]));
+
