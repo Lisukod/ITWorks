@@ -7,7 +7,6 @@ class Polynominal {
   }
   
   function addExpressions(exprA, exprB) {
-    let exprSum = [];
     if (checkVariables(exprA) === false) {
       console.error("Incorrect variable in first expression");
       return false;
@@ -15,7 +14,7 @@ class Polynominal {
       console.error("Incorrect variable in second expression");
       return false;
     }
-    exprSum = exprA.concat(exprB);
+    const exprSum = [].concat(exprA, exprB);
     sortExpression(exprSum);
     return toString(exprSum);
   }
