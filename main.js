@@ -107,7 +107,7 @@ function mainTest(arrA, arrB, expectedResult, testName) {
 }
 
 //Sort test
-//to test sort
+
 function sortTest(array, expectedArray) {
   sortExpression(array);
   try {
