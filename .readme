@@ -2,3 +2,6 @@ To use function call "addExpressions(makePolynominals([[coefficient, exponent], 
 Coefficient and exponent can be any of real numbers, positive and negative
 If terms are not sorted or in one expression are multiple with same exponent program will handle it
 Arrays of Polymonimals cannot be assignet to variable or object cause it may return unexpected outcome when used multiple times in function
+Test syntax:
+mainTest(makePolynominals([[coefficient, exponent], ...]), makePolynominals([[coefficient, exponent], ...]), "Expected result", "Test name")
+The "testName" is optional
